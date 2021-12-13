@@ -5,7 +5,7 @@ exports.up = function(knex) {
         table.int('PEDIDO_ID').notNull()
         table.int('PRODUTO_ID').notNull()
         table.int('QUANTIDADE').notNull()
-        table.string('VALOR_ITEM')
+        table.float('VALOR_ITEM').notNull()
 
         table.foreign('PEDIDO_ID').references('TB_PEDIDO.ID')
 
